@@ -1,0 +1,114 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "overrides": [],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "eslint-plugin-unused-imports"
+  ],
+  "rules": {
+    // Two space identation
+    "indent": [
+      "warn",
+      2,
+      {
+        "ignoredNodes": [
+          "PropertyDefinition"
+        ]
+      }
+    ],
+    // Forces semicolon
+    "semi": "warn",
+    // Forces single quote
+    "quotes": [
+      "warn",
+      "single"
+    ],
+    // Forces the file to end in EOL
+    "eol-last": "warn",
+    // Removes comma in the last item of an array
+    "comma-dangle": "warn",
+    // Removes trailing spaces
+    "no-trailing-spaces": "warn",
+    // Warns console usage
+    "no-console": "off",
+    // Removes unecessary imports and unecessary variables, except parameters starting with underscore
+    "@typescript-eslint/no-unused-vars": "off",
+    "unused-imports/no-unused-imports": "error",
+    "unused-imports/no-unused-vars": [
+      "warn",
+      {
+        "vars": "all",
+        "varsIgnorePattern": "^_",
+        "args": "after-used",
+        "argsIgnorePattern": "^_"
+      }
+    ],
+    // Removes multiple empty lines
+    "no-multiple-empty-lines": [
+      "warn",
+      {
+        "max": 1
+      }
+    ],
+    // Forces LF EOL
+    "linebreak-style": [
+      "warn",
+      "unix"
+    ],
+    // Forces brackets to be Stroustrup
+    "brace-style": [
+      "warn",
+      "stroustrup"
+    ],
+    // Removes space after if, for and while keywords
+    "keyword-spacing": [
+      "warn",
+      {
+        "after": true,
+        "overrides": {
+          "if": {
+            "after": false
+          },
+          "for": {
+            "after": false
+          },
+          "while": {
+            "after": false
+          }
+        }
+      }
+    ],
+    // Disables mandatory spread attribution
+    "prefer-spread": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-inferrable-types": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/no-empty-interface": "off",
+    "@typescript-eslint/no-empty-function": "off",
+    "@typescript-eslint/ban-types": "off",
+    "@typescript-eslint/ban-ts-comment": "off",
+    "@typescript-eslint/no-var-requires": "off",
+    "no-case-declarations": "off",
+    "object-curly-spacing": [
+      "warn",
+      "always"
+    ],
+    "array-bracket-spacing": [
+      "warn",
+      "never"
+    ]
+  }
+}

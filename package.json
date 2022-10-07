@@ -1,0 +1,25 @@
+{
+  "name": "browserify-project",
+  "version": "0.0.0",
+  "scripts": {
+    "build": "node browserify.mjs",
+    "start": "npx live-server ./public",
+    "start:watch": "concurrently npm:start npm:watch",
+    "watch": "npx nodemon --watch . --ignore \"public/*.js\" --exec \"npm run build\" -e ts,json"
+  },
+  "devDependencies": {
+    "@types/browserify": "^12.0.37",
+    "@types/node": "^18.8.3",
+    "@typescript-eslint/eslint-plugin": "^5.39.0",
+    "@typescript-eslint/parser": "^5.39.0",
+    "browserify": "^17.0.0",
+    "concurrently": "^7.4.0",
+    "eslint": "^8.24.0",
+    "eslint-plugin-unused-imports": "^2.0.0",
+    "live-server": "^1.2.2",
+    "nodemon": "^2.0.20",
+    "tsify": "^5.0.4",
+    "typescript": "^4.6.4"
+  },
+  "dependencies": {}
+}
